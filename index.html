@@ -272,6 +272,122 @@
             0% { transform: translateY(-50%) rotate(0deg); }
             100% { transform: translateY(-50%) rotate(360deg); }
         }
+
+        /* Magnific Popup Gallery Navigation Arrows */
+        .mfp-arrow {
+            opacity: 0.8;
+            margin: 0;
+            top: 50%;
+            margin-top: -55px;
+            padding: 0;
+            width: 90px;
+            height: 110px;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .mfp-arrow:active {
+            margin-top: -54px;
+        }
+
+        .mfp-arrow:hover,
+        .mfp-arrow:focus {
+            opacity: 1;
+        }
+
+        .mfp-arrow:before,
+        .mfp-arrow:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: 35px;
+            margin-left: 35px;
+            border: medium inset transparent;
+        }
+
+        .mfp-arrow:after {
+            border-top-width: 13px;
+            border-bottom-width: 13px;
+            top: 8px;
+        }
+
+        .mfp-arrow:before {
+            border-top-width: 21px;
+            border-bottom-width: 21px;
+            opacity: 0.7;
+        }
+
+        .mfp-arrow-left {
+            left: 0;
+        }
+
+        .mfp-arrow-left:after {
+            border-right: 17px solid #FFF;
+            margin-left: 31px;
+        }
+
+        .mfp-arrow-left:before {
+            margin-left: 25px;
+            border-right: 27px solid #3F3F3F;
+        }
+
+        .mfp-arrow-right {
+            right: 0;
+        }
+
+        .mfp-arrow-right:after {
+            border-left: 17px solid #FFF;
+            margin-left: 39px;
+        }
+
+        .mfp-arrow-right:before {
+            border-left: 27px solid #3F3F3F;
+        }
+
+        /* Gallery counter */
+        .mfp-counter {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #CCC;
+            font-size: 12px;
+            line-height: 18px;
+            white-space: nowrap;
+        }
+
+        /* Enhanced gallery navigation */
+        .mfp-figure figure {
+            margin: 0;
+        }
+
+        .mfp-figure figure:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .mfp-figure figure .mfp-img {
+            z-index: 2;
+            position: relative;
+        }
+
+        /* About image height control */
+        .about-image img {
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
     </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -460,56 +576,74 @@
                     <li class="filter" data-filter="all">show all</li>
                     <li class="filter" data-filter=".webdesign">MERN</li>
                     <li class="filter" data-filter=".development">MEAN</li>
-                    <li class="filter" data-filter=".photography">IA</li>
                 </ul>
             </div>
             <div class="work-inner">
                 <div class="row work-posts grid">
-                    <!-- START SINGLE WORK DESIGN AREA -->
-                    <div class="col-md-4 col-sm-6 mix webdesign">
+                     <div class="col-md-4 col-sm-6 mix photography webdesign">
                         <div class="item">
-                            <a href="assets/images/work/1.jpg" class="work-popup">
+                            <a href="assets/images/collo.png" class="colocation-gallery" data-gallery="colocation">
                                 <figure class="effect-ruby">
-                                    <img src="assets/images/mycar.png" alt="image">
+                                    <img src="assets/images/collo.png" alt="image">
                                     <figcaption>
-                                        <h2>web development</h2>
-                                        <p>project one</p>
+                                        <h2>CoLocation Platform</h2>
+                                        <p>Plateforme de colocation idéale</p>
                                     </figcaption>
                                 </figure>
                             </a>
+                            <!-- Hidden gallery items -->
+                            <div style="display: none;">
+                                <a href="assets/images/collo1.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                                <a href="assets/images/collo2.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                                <a href="assets/images/collo3.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END SINGLE WORK DESIGN AREA -->
+                    <!-- START SINGLE WORK DESIGN AREA -->
+                    <div class="col-md-4 col-sm-6 mix webdesign">
+                        <div class="item">
+                            <a href="assets/images/mycar.png" class="mycar-gallery" data-gallery="mycar">
+                                <figure class="effect-ruby">
+                                    <img src="assets/images/mycar.png" alt="image">
+                                    <figcaption>
+                                        <h2>MyCar Platform</h2>
+                                        <p>Plateforme automobile complète</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                            <!-- Hidden gallery items -->
+                            <div style="display: none;">
+                                <a href="assets/images/recherche_car.png" class="mycar-gallery" data-gallery="mycar" title="Interface de recherche de véhicules"></a>
+                                <a href="assets/images/profile.png" class="mycar-gallery" data-gallery="mycar" title="Profil utilisateur"></a>
+                                <a href="assets/images/estimation.png" class="mycar-gallery" data-gallery="mycar" title="Page de détails et estimation"></a>
+                                <a href="assets/images/admin_interface.png" class="mycar-gallery" data-gallery="mycar" title="Interface d'administration"></a>
+                            </div>
                         </div>
                     </div>
                     <!-- END SINGLE WORK DESIGN AREA -->
                     <!-- START SINGLE WORK DESIGN AREA -->
                     <div class="col-md-4 col-sm-6 mix development">
                         <div class="item">
-                            <a href="assets/images/work/2.jpg" class="work-popup">
+                            <a href="assets/images/nextmunch.png" class="nextmunch-gallery" data-gallery="nextmunch">
                                 <figure class="effect-ruby">
                                     <img src="assets/images/nextmunch.png" alt="image">
                                     <figcaption>
-                                        <h2>web development</h2>
-                                        <p>project two</p>
+                                        <h2>NextMunch Platform</h2>
+                                        <p>Plateforme de livraison de nourriture</p>
                                     </figcaption>
                                 </figure>
                             </a>
+                            <!-- Hidden gallery items -->
+                            <div style="display: none;">
+                                <a href="assets/images/next.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page de contact - Formulaire de contact pour l'équipe"></a>
+                                <a href="assets/images/next1.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page d'accueil - Interface principale avec statistiques et commandes"></a>
+                            </div>
                         </div>
                     </div>
                     <!-- END SINGLE WORK DESIGN AREA -->
                     <!-- START SINGLE WORK DESIGN AREA -->
-                    <div class="col-md-4 col-sm-6 mix photography webdesign">
-                        <div class="item">
-                            <a href="assets/images/work/3.jpg" class="work-popup">
-                                <figure class="effect-ruby">
-                                    <img src="assets/images/chatbot.png" alt="image">
-                                    <figcaption>
-                                        <h2>WEB development</h2>
-                                        <p>project three</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- END SINGLE WORK DESIGN AREA -->
+                   
                 </div>
             </div>
         </div>
@@ -565,18 +699,6 @@
             <div class="row">
                 <!-- START SINGLE FOOTER DESIGN AREA -->
                 <div class="col-sm-12 text-center">
-                    <div class="footer-social-link">
-                        <ul>
-                            <li><a href=""><i class="fa fa-facebook fb"></i></a>
-                            </li>
-                            <li><a href=""><i class="fa fa-twitter tw"></i></a>
-                            </li>
-                            <li><a href=""><i class="fa fa-dribbble dri"></i></a>
-                            </li>
-                            <li><a href=""><i class="fa fa-instagram ins"></i></a>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="single-footer wow fadeInUp" data-wow-delay=".2s">
                         <h6>&copy;copyright | Amen Allah JOUILA <br> 2024 all right Reserved </h6>
                     </div>
@@ -619,6 +741,44 @@
     
     <!-- TOAST AND CONTACT FORM HANDLER -->
     <script>
+        // Gallery popup configuration
+        $(document).ready(function() {
+            // Configure regular work popups
+            $('.work-popup').magnificPopup({
+                type: 'image'
+            });
+            
+            // Configure MyCar gallery
+            $('.mycar-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
+                }
+            });
+            
+            // Configure NextMunch gallery
+            $('.nextmunch-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
+                }
+            });
+            
+            // Configure CoLocation gallery
+            $('.colocation-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
+                }
+            });
+        });
+
         // Toast function
         function showToast(message, type = 'success') {
             // Remove existing toasts
