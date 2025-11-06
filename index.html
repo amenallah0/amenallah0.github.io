@@ -388,6 +388,175 @@
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
+
+        /* Carousel Styling */
+        .carousel-container {
+            margin: 40px 0;
+            padding: 30px 0;
+        }
+
+        .carousel-title {
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .owl-carousel {
+            position: relative;
+        }
+
+        .carousel-item {
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-item .item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 280px;
+        }
+
+        .carousel-item .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .carousel-item figure {
+            margin: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .carousel-item figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-item:hover figcaption {
+            transform: translateY(0);
+        }
+
+        .carousel-item figcaption h2 {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        .carousel-item figcaption p {
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* Owl carousel controls */
+        .owl-carousel .owl-nav {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .owl-carousel .owl-nav button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.8) !important;
+            color: #333 !important;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        .owl-carousel .owl-nav button:hover {
+            background: #007bff !important;
+            color: white !important;
+        }
+
+        .owl-carousel .owl-prev {
+            left: -70px;
+        }
+
+        .owl-carousel .owl-next {
+            right: -70px;
+        }
+
+        .owl-carousel .owl-dots {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .owl-carousel .owl-dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background: #ddd;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .owl-carousel .owl-dot.active {
+            background: #007bff;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-item {
+                padding: 10px;
+            }
+
+            .carousel-item .item {
+                height: 220px;
+            }
+
+            .owl-carousel .owl-prev,
+            .owl-carousel .owl-next {
+                display: none;
+            }
+
+            .carousel-title {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .carousel-item .item {
+                height: 180px;
+            }
+        }
     </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -579,71 +748,103 @@
                 </ul>
             </div>
             <div class="work-inner">
-                <div class="row work-posts grid">
-                     <div class="col-md-4 col-sm-6 mix photography webdesign">
-                        <div class="item">
-                            <a href="assets/images/collo.png" class="colocation-gallery" data-gallery="colocation">
-                                <figure class="effect-ruby">
-                                    <img src="assets/images/collo.png" alt="image">
-                                    <figcaption>
-                                        <h2>CoLocation Platform</h2>
-                                        <p>Plateforme de colocation idéale</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <!-- Hidden gallery items -->
-                            <div style="display: none;">
-                                <a href="assets/images/collo1.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
-                                <a href="assets/images/collo2.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
-                                <a href="assets/images/collo3.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                <!-- MERN CAROUSEL -->
+                <div class="carousel-container mern-carousel-wrapper" style="display: none;">
+                    <h3 class="carousel-title">MERN Projects</h3>
+                    <div class="owl-carousel mern-carousel">
+                        <!-- CoLocation -->
+                        <div class="carousel-item webdesign">
+                            <div class="item">
+                                <a href="assets/images/collo.png" class="colocation-gallery" data-gallery="colocation">
+                                    <figure class="effect-ruby">
+                                        <img src="assets/images/collo.png" alt="image">
+                                        <figcaption>
+                                            <h2>CoLocation Platform</h2>
+                                            <p>Plateforme de colocation idéale</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <!-- Hidden gallery items -->
+                                <div style="display: none;">
+                                    <a href="assets/images/collo1.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                                    <a href="assets/images/collo2.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                                    <a href="assets/images/collo3.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MyCar -->
+                        <div class="carousel-item webdesign">
+                            <div class="item">
+                                <a href="assets/images/mycar.png" class="mycar-gallery" data-gallery="mycar">
+                                    <figure class="effect-ruby">
+                                        <img src="assets/images/mycar.png" alt="image">
+                                        <figcaption>
+                                            <h2>MyCar Platform</h2>
+                                            <p>Plateforme automobile complète</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <!-- Hidden gallery items -->
+                                <div style="display: none;">
+                                    <a href="assets/images/recherche_car.png" class="mycar-gallery" data-gallery="mycar" title="Interface de recherche de véhicules"></a>
+                                    <a href="assets/images/profile.png" class="mycar-gallery" data-gallery="mycar" title="Profil utilisateur"></a>
+                                    <a href="assets/images/estimation.png" class="mycar-gallery" data-gallery="mycar" title="Page de détails et estimation"></a>
+                                    <a href="assets/images/admin_interface.png" class="mycar-gallery" data-gallery="mycar" title="Interface d'administration"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NeoWeare -->
+                        <div class="carousel-item webdesign">
+                            <div class="item">
+                                <a href="assets/neo-weare/home.png" class="neoweare-gallery" data-gallery="neoweare">
+                                    <figure class="effect-ruby">
+                                        <img src="assets/neo-weare/home.png" alt="image">
+                                        <figcaption>
+                                            <h2>NeoWear Platform</h2>
+                                            <p>E-commerce de mode moderne</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <!-- Hidden gallery items -->
+                                <div style="display: none;">
+                                    <a href="assets/neo-weare/collection.png" class="neoweare-gallery" data-gallery="neoweare" title="Page collection - Catalogue de produits"></a>
+                                    <a href="assets/neo-weare/collection2.png" class="neoweare-gallery" data-gallery="neoweare" title="Collection 2 - Nouvelle collection"></a>
+                                    <a href="assets/neo-weare/produit1.png" class="neoweare-gallery" data-gallery="neoweare" title="Page produit - Détails du produit"></a>
+                                    <a href="assets/neo-weare/contact.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de contact"></a>
+                                    <a href="assets/neo-weare/apropos.png" class="neoweare-gallery" data-gallery="neoweare" title="À propos - Informations sur la marque"></a>
+                                    <a href="assets/neo-weare/design.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de design - Catalogue des designs"></a>
+                                    <a href="assets/neo-weare/dernierecollection.png" class="neoweare-gallery" data-gallery="neoweare" title="Dernière collection - Collection exclusive"></a>
+                                    <a href="assets/neo-weare/stock.png" class="neoweare-gallery" data-gallery="neoweare" title="Gestion du stock"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- END SINGLE WORK DESIGN AREA -->
-                    <!-- START SINGLE WORK DESIGN AREA -->
-                    <div class="col-md-4 col-sm-6 mix webdesign">
-                        <div class="item">
-                            <a href="assets/images/mycar.png" class="mycar-gallery" data-gallery="mycar">
-                                <figure class="effect-ruby">
-                                    <img src="assets/images/mycar.png" alt="image">
-                                    <figcaption>
-                                        <h2>MyCar Platform</h2>
-                                        <p>Plateforme automobile complète</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <!-- Hidden gallery items -->
-                            <div style="display: none;">
-                                <a href="assets/images/recherche_car.png" class="mycar-gallery" data-gallery="mycar" title="Interface de recherche de véhicules"></a>
-                                <a href="assets/images/profile.png" class="mycar-gallery" data-gallery="mycar" title="Profil utilisateur"></a>
-                                <a href="assets/images/estimation.png" class="mycar-gallery" data-gallery="mycar" title="Page de détails et estimation"></a>
-                                <a href="assets/images/admin_interface.png" class="mycar-gallery" data-gallery="mycar" title="Interface d'administration"></a>
+                </div>
+                
+                <!-- MEAN CAROUSEL -->
+                <div class="carousel-container mean-carousel-wrapper" style="display: none;">
+                    <h3 class="carousel-title">MEAN Projects</h3>
+                    <div class="owl-carousel mean-carousel">
+                        <!-- NextMunch -->
+                        <div class="carousel-item development">
+                            <div class="item">
+                                <a href="assets/images/nextmunch.png" class="nextmunch-gallery" data-gallery="nextmunch">
+                                    <figure class="effect-ruby">
+                                        <img src="assets/images/nextmunch.png" alt="image">
+                                        <figcaption>
+                                            <h2>NextMunch Platform</h2>
+                                            <p>Plateforme de livraison de nourriture</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <!-- Hidden gallery items -->
+                                <div style="display: none;">
+                                    <a href="assets/images/next.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page de contact - Formulaire de contact pour l'équipe"></a>
+                                    <a href="assets/images/next1.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page d'accueil - Interface principale avec statistiques et commandes"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- END SINGLE WORK DESIGN AREA -->
-                    <!-- START SINGLE WORK DESIGN AREA -->
-                    <div class="col-md-4 col-sm-6 mix development">
-                        <div class="item">
-                            <a href="assets/images/nextmunch.png" class="nextmunch-gallery" data-gallery="nextmunch">
-                                <figure class="effect-ruby">
-                                    <img src="assets/images/nextmunch.png" alt="image">
-                                    <figcaption>
-                                        <h2>NextMunch Platform</h2>
-                                        <p>Plateforme de livraison de nourriture</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <!-- Hidden gallery items -->
-                            <div style="display: none;">
-                                <a href="assets/images/next.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page de contact - Formulaire de contact pour l'équipe"></a>
-                                <a href="assets/images/next1.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page d'accueil - Interface principale avec statistiques et commandes"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END SINGLE WORK DESIGN AREA -->
-                    <!-- START SINGLE WORK DESIGN AREA -->
-                   
                 </div>
             </div>
         </div>
@@ -777,6 +978,87 @@
                     preload: [0,1]
                 }
             });
+            
+            // Configure NeoWeare gallery
+            $('.neoweare-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
+                }
+            });
+
+            // Initialize Owl Carousels
+            $('.mern-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 3,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+
+            $('.mean-carousel').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                items: 3,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            });
+
+            // Handle work filter buttons
+            $('.filter').on('click', function() {
+                var filterValue = $(this).data('filter');
+                
+                // Remove active class from all filters
+                $('.filter').removeClass('active');
+                
+                // Add active class to clicked filter
+                $(this).addClass('active');
+                
+                // Show/hide carousels based on filter
+                if (filterValue === 'all') {
+                    $('.mern-carousel-wrapper').slideDown();
+                    $('.mean-carousel-wrapper').slideDown();
+                } else if (filterValue === '.webdesign') {
+                    $('.mern-carousel-wrapper').slideDown();
+                    $('.mean-carousel-wrapper').slideUp();
+                } else if (filterValue === '.development') {
+                    $('.mern-carousel-wrapper').slideUp();
+                    $('.mean-carousel-wrapper').slideDown();
+                }
+            });
+
+            // Initialize with "show all" active
+            $('.filter[data-filter="all"]').addClass('active');
+            $('.mern-carousel-wrapper').show();
+            $('.mean-carousel-wrapper').show();
         });
 
         // Toast function
