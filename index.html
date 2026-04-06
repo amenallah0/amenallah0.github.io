@@ -745,104 +745,239 @@
                     <li class="filter" data-filter="all">show all</li>
                     <li class="filter" data-filter=".webdesign">MERN</li>
                     <li class="filter" data-filter=".development">MEAN</li>
+                    <li class="filter" data-filter=".mobile">Mobile</li>
                 </ul>
             </div>
             <div class="work-inner">
-                <!-- MERN CAROUSEL -->
-                <div class="carousel-container mern-carousel-wrapper" style="display: none;">
-                    <h3 class="carousel-title">MERN Projects</h3>
-                    <div class="owl-carousel mern-carousel">
-                        <!-- CoLocation -->
-                        <div class="carousel-item webdesign">
-                            <div class="item">
-                                <a href="assets/images/collo.png" class="colocation-gallery" data-gallery="colocation">
-                                    <figure class="effect-ruby">
-                                        <img src="assets/images/collo.png" alt="image">
-                                        <figcaption>
-                                            <h2>CoLocation Platform</h2>
-                                            <p>Plateforme de colocation idéale</p>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                                <!-- Hidden gallery items -->
-                                <div style="display: none;">
-                                    <a href="assets/images/collo1.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
-                                    <a href="assets/images/collo2.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
-                                    <a href="assets/images/collo3.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                <!-- MERN PROJECTS -->
+                <div class="mern-projects-wrapper" style="display: none;">
+                    <h3 class="section-title">MERN Projects</h3>
+
+                    <!-- CoLocation Project -->
+                    <div class="project-row webdesign">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-image-container">
+                                    <img src="assets/images/collo.png" alt="CoLocation Platform" class="project-image">
+                                    <div class="project-overlay">
+                                        <a href="assets/images/collo.png" class="gallery-link colocation-gallery" data-gallery="colocation">View Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-content">
+                                    <h4 class="project-title">CoLocation Platform</h4>
+                                    <p class="project-description">Developed a full web application for roommate search and management with real-time messaging and geolocation</p>
+                                    <ul class="project-description-list">
+                                        <li>Implemented an advanced search system with multiple filters</li>
+                                        <li>Implemented image upload functionality</li>
+                                        <li>Implemented real-time communication using WebSockets</li>
+                                    </ul>
+                                    <p class="project-description tech-note"><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB, Firebase</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">Express.js</span>
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Firebase</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- MyCar -->
-                        <div class="carousel-item webdesign">
-                            <div class="item">
-                                <a href="assets/images/mycar.png" class="mycar-gallery" data-gallery="mycar">
-                                    <figure class="effect-ruby">
-                                        <img src="assets/images/mycar.png" alt="image">
-                                        <figcaption>
-                                            <h2>MyCar Platform</h2>
-                                            <p>Plateforme automobile complète</p>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                                <!-- Hidden gallery items -->
-                                <div style="display: none;">
-                                    <a href="assets/images/recherche_car.png" class="mycar-gallery" data-gallery="mycar" title="Interface de recherche de véhicules"></a>
-                                    <a href="assets/images/profile.png" class="mycar-gallery" data-gallery="mycar" title="Profil utilisateur"></a>
-                                    <a href="assets/images/estimation.png" class="mycar-gallery" data-gallery="mycar" title="Page de détails et estimation"></a>
-                                    <a href="assets/images/admin_interface.png" class="mycar-gallery" data-gallery="mycar" title="Interface d'administration"></a>
+                        <!-- Hidden gallery items -->
+                        <div style="display: none;">
+                            <a href="assets/images/collo1.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                            <a href="assets/images/collo2.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                            <a href="assets/images/collo3.png" class="colocation-gallery" data-gallery="colocation" title="Interface de recherche - Trouvez votre colocation idéale"></a>
+                        </div>
+                    </div>
+
+                    <!-- MyCar Project -->
+                    <div class="project-row webdesign">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-content">
+                                    <h4 class="project-title">MyCar Platform</h4>
+                                    <p class="project-description">Designed and developed a web application using React.js (frontend) and Spring Boot (backend)</p>
+                                    <ul class="project-description-list">
+                                        <li>Implemented routing and state management using Redux Toolkit</li>
+                                        <li>Developed and integrated REST APIs</li>
+                                        <li>Integrated AI models for price prediction and image processing</li>
+                                        <li>Integrated the Flouci API for secure payment processing</li>
+                                        <li>Deployed the project using Render and Vercel</li>
+                                    </ul>
+                                    <p class="project-description tech-note"><strong>Technologies:</strong> React.js, Spring Boot, MySQL, GitHub</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Spring Boot</span>
+                                        <span class="tech-badge">MySQL</span>
+                                        <span class="tech-badge">Redux Toolkit</span>
+                                        <span class="tech-badge">AI Models</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-image-container">
+                                    <img src="assets/images/mycar.png" alt="MyCar Platform" class="project-image">
+                                    <div class="project-overlay">
+                                        <a href="assets/images/mycar.png" class="gallery-link mycar-gallery" data-gallery="mycar">View Gallery</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- NeoWeare -->
-                        <div class="carousel-item webdesign">
-                            <div class="item">
-                                <a href="assets/neo-weare/home.png" class="neoweare-gallery" data-gallery="neoweare">
-                                    <figure class="effect-ruby">
-                                        <img src="assets/neo-weare/home.png" alt="image">
-                                        <figcaption>
-                                            <h2>NeoWear Platform</h2>
-                                            <p>E-commerce de mode moderne</p>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                                <!-- Hidden gallery items -->
-                                <div style="display: none;">
-                                    <a href="assets/neo-weare/collection.png" class="neoweare-gallery" data-gallery="neoweare" title="Page collection - Catalogue de produits"></a>
-                                    <a href="assets/neo-weare/collection2.png" class="neoweare-gallery" data-gallery="neoweare" title="Collection 2 - Nouvelle collection"></a>
-                                    <a href="assets/neo-weare/produit1.png" class="neoweare-gallery" data-gallery="neoweare" title="Page produit - Détails du produit"></a>
-                                    <a href="assets/neo-weare/contact.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de contact"></a>
-                                    <a href="assets/neo-weare/apropos.png" class="neoweare-gallery" data-gallery="neoweare" title="À propos - Informations sur la marque"></a>
-                                    <a href="assets/neo-weare/design.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de design - Catalogue des designs"></a>
-                                    <a href="assets/neo-weare/dernierecollection.png" class="neoweare-gallery" data-gallery="neoweare" title="Dernière collection - Collection exclusive"></a>
-                                    <a href="assets/neo-weare/stock.png" class="neoweare-gallery" data-gallery="neoweare" title="Gestion du stock"></a>
+                        <!-- Hidden gallery items -->
+                        <div style="display: none;">
+                            <a href="assets/images/recherche_car.png" class="mycar-gallery" data-gallery="mycar" title="Interface de recherche de véhicules"></a>
+                            <a href="assets/images/profile.png" class="mycar-gallery" data-gallery="mycar" title="Profil utilisateur"></a>
+                            <a href="assets/images/estimation.png" class="mycar-gallery" data-gallery="mycar" title="Page de détails et estimation"></a>
+                            <a href="assets/images/admin_interface.png" class="mycar-gallery" data-gallery="mycar" title="Interface d'administration"></a>
+                        </div>
+                    </div>
+
+                    <!-- NeoWeare Project -->
+                    <div class="project-row webdesign">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-image-container">
+                                    <img src="assets/neo-weare/a.png" alt="NeoWear Platform" class="project-image">
+                                    <div class="project-overlay">
+                                        <a href="assets/neo-weare/a.png" class="gallery-link neoweare-gallery" data-gallery="neoweare">View Gallery</a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-content">
+                                    <h4 class="project-title">NeoWear Platform</h4>
+                                    <p class="project-description">Developed a complete e-commerce platform for premium fashion sales using the MERN stack</p>
+                                    <ul class="project-description-list">
+                                        <li>Built the frontend using React.js (Hooks, useState, useEffect) and Vite for fast rendering</li>
+                                        <li>Implemented an interactive product gallery with search, filtering, pagination, and modal-based product details</li>
+                                        <li>Developed RESTful APIs using Node.js and Express.js for product management and user authentication</li>
+                                        <li>Designed and managed the MongoDB database schema for products, users, and orders</li>
+                                        <li>Implemented user authentication and authorization with JWT tokens</li>
+                                    </ul>
+                                    <p class="project-description tech-note"><strong>Technologies:</strong> MongoDB, Express.js, React.js, Node.js, Vite, JWT</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">MongoDB</span>
+                                        <span class="tech-badge">Express.js</span>
+                                        <span class="tech-badge">React.js</span>
+                                        <span class="tech-badge">Node.js</span>
+                                        <span class="tech-badge">Vite</span>
+                                        <span class="tech-badge">JWT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden gallery items -->
+                        <div style="display: none;">
+                            <a href="assets/neo-weare/collection.png" class="neoweare-gallery" data-gallery="neoweare" title="Page collection - Catalogue de produits"></a>
+                            <a href="assets/neo-weare/collection2.png" class="neoweare-gallery" data-gallery="neoweare" title="Collection 2 - Nouvelle collection"></a>
+                            <a href="assets/neo-weare/produit1.png" class="neoweare-gallery" data-gallery="neoweare" title="Page produit - Détails du produit"></a>
+                            <a href="assets/neo-weare/contact.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de contact"></a>
+                            <a href="assets/neo-weare/apropos.png" class="neoweare-gallery" data-gallery="neoweare" title="À propos - Informations sur la marque"></a>
+                            <a href="assets/neo-weare/design.png" class="neoweare-gallery" data-gallery="neoweare" title="Page de design - Catalogue des designs"></a>
+                            <a href="assets/neo-weare/dernierecollection.png" class="neoweare-gallery" data-gallery="neoweare" title="Dernière collection - Collection exclusive"></a>
+                            <a href="assets/neo-weare/stock.png" class="neoweare-gallery" data-gallery="neoweare" title="Gestion du stock"></a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- MEAN CAROUSEL -->
-                <div class="carousel-container mean-carousel-wrapper" style="display: none;">
-                    <h3 class="carousel-title">MEAN Projects</h3>
-                    <div class="owl-carousel mean-carousel">
-                        <!-- NextMunch -->
-                        <div class="carousel-item development">
-                            <div class="item">
-                                <a href="assets/images/nextmunch.png" class="nextmunch-gallery" data-gallery="nextmunch">
-                                    <figure class="effect-ruby">
-                                        <img src="assets/images/nextmunch.png" alt="image">
-                                        <figcaption>
-                                            <h2>NextMunch Platform</h2>
-                                            <p>Plateforme de livraison de nourriture</p>
-                                        </figcaption>
-                                    </figure>
-                                </a>
-                                <!-- Hidden gallery items -->
-                                <div style="display: none;">
-                                    <a href="assets/images/next.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page de contact - Formulaire de contact pour l'équipe"></a>
-                                    <a href="assets/images/next1.png" class="nextmunch-gallery" data-gallery="nextmunch" title="Page d'accueil - Interface principale avec statistiques et commandes"></a>
+
+                <!-- MOBILE PROJECTS -->
+                <div class="mobile-projects-wrapper" style="display: none;">
+                    <h3 class="section-title">Mobile Projects</h3>
+
+                    <!-- UrbanGo Project -->
+                    <div class="project-row mobile">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-image-container">
+                                    <img src="assets/urbango/Screenshot_20260123_131854_urbanGo.jpg" alt="UrbanGo Mobile App" class="project-image">
+                                    <div class="project-overlay">
+                                        <a href="assets/urbango/Screenshot_20260122_134944_urbanGo.jpg" class="gallery-link urbango-gallery" data-gallery="urbango">View Gallery</a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-content">
+                                    <h4 class="project-title">UrbanGo Mobile App</h4>
+                                    <p class="project-description">Backend Architecture: Designed and implemented a service-oriented backend architecture using NestJS. Implemented real-time communication using WebSockets to track geolocation and update order statuses instantly.</p>
+                                    <ul class="project-description-list">
+                                        <li>Data Management: Designed the database schema and managed data access using Prisma ORM, ensuring data consistency and query performance.</li>
+                                        <li>Advanced Mobile Development: Developed the cross-platform mobile application for iOS and Android using React Native and Expo. Implemented advanced state management with Zustand to ensure a smooth and responsive user experience.</li>
+                                        <li>DevOps and Deployment: Implemented a CI/CD pipeline using GitHub Actions to automate testing and deployment. Containerized the backend using Docker and managed traffic using an Nginx reverse proxy.</li>
+                                        <li>Optimization and Performance: Integrated Redis for caching sessions and frequently accessed data, reducing latency and database load.</li>
+                                        <li>Security: Implemented authentication and authorization using JWT (JSON Web Tokens) to secure APIs and application routes.</li>
+                                    </ul>
+                                    <p class="project-description tech-note"><strong>Technologies:</strong> React Native, Expo, TypeScript, Zustand, NestJS, Node.js, Prisma, Redis, WebSockets, Docker, Nginx, GitHub Actions</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React Native</span>
+                                        <span class="tech-badge">Expo</span>
+                                        <span class="tech-badge">TypeScript</span>
+                                        <span class="tech-badge">Zustand</span>
+                                        <span class="tech-badge">NestJS</span>
+                                        <span class="tech-badge">Prisma</span>
+                                        <span class="tech-badge">Redis</span>
+                                        <span class="tech-badge">WebSockets</span>
+                                        <span class="tech-badge">Docker</span>
+                                        <span class="tech-badge">Nginx</span>
+                                        <span class="tech-badge">GitHub Actions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden gallery items -->
+                        <div style="display: none;">
+                            <a href="assets/urbango/Screenshot_20260122_134944_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo mobile dashboard"></a>
+                            <a href="assets/urbango/Screenshot_20260123_131818_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo analytics screen"></a>
+                            <a href="assets/urbango/Screenshot_20260123_131836_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo user management"></a>
+                            <a href="assets/urbango/Screenshot_20260123_131844_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo shop admin"></a>
+                            <a href="assets/urbango/Screenshot_20260123_131854_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo mobile order screen"></a>
+                            <a href="assets/urbango/Screenshot_20260123_131926_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo order summary"></a>
+                            <a href="assets/urbango/Screenshot_20260123_132031_urbanGo.jpg" class="urbango-gallery" data-gallery="urbango" title="UrbanGo today stats"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEAN PROJECTS -->
+                <div class="mean-projects-wrapper" style="display: none;">
+                    <h3 class="section-title">MEAN Projects</h3>
+
+                    <!-- FoodSpot Project -->
+                    <div class="project-row development">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-image-container">
+                                    <img src="assets/images/nextmunch.png" alt="FoodSpot Mobile App" class="project-image">
+                                    <div class="project-overlay">
+                                        <a href="assets/images/nextmunch.png" class="gallery-link foodspot-gallery" data-gallery="foodspot">View Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <div class="project-content">
+                                    <h4 class="project-title">FoodSpot Mobile App</h4>
+                                    <p class="project-description">Developed a mobile application for discovering and booking restaurants with authentication and cart management</p>
+                                    <ul class="project-description-list">
+                                        <li>Implemented restaurant search and filtering by name and cuisine type</li>
+                                        <li>Implemented a shopping cart system with quantity management</li>
+                                        <li>Developed a cross-platform mobile application using React Native and Expo</li>
+                                    </ul>
+                                    <p class="project-description tech-note"><strong>Technologies:</strong> React Native, Expo, NestJS, TypeScript, Prisma, PostgreSQL</p>
+                                    <div class="project-tech-stack">
+                                        <span class="tech-badge">React Native</span>
+                                        <span class="tech-badge">Expo</span>
+                                        <span class="tech-badge">NestJS</span>
+                                        <span class="tech-badge">TypeScript</span>
+                                        <span class="tech-badge">Prisma</span>
+                                        <span class="tech-badge">PostgreSQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hidden gallery items -->
+                        <div style="display: none;">
+                            <a href="assets/images/next.png" class="foodspot-gallery" data-gallery="foodspot" title="Page de contact - Formulaire de contact pour l'équipe"></a>
+                            <a href="assets/images/next1.png" class="foodspot-gallery" data-gallery="foodspot" title="Page d'accueil - Interface principale avec statistiques et commandes"></a>
                         </div>
                     </div>
                 </div>
@@ -901,7 +1036,9 @@
                 <!-- START SINGLE FOOTER DESIGN AREA -->
                 <div class="col-sm-12 text-center">
                     <div class="single-footer wow fadeInUp" data-wow-delay=".2s">
-                        <h6>&copy;copyright | Amen Allah JOUILA <br> 2024 all right Reserved </h6>
+                        <p>amenallah.JOUILA@esprim.tn — +216 50 410 155</p>
+                        <p>GitHub: github.com/amenallah0 | Portfolio: amenallah0.github.io</p>
+                        <h6>&copy;copyright | Amen Allah JOUILA 2026 all rights reserved</h6>
                     </div>
                 </div>
                 <!-- / END SINGLE FOOTER DESIGN AREA -->
@@ -979,6 +1116,16 @@
                 }
             });
             
+            // Configure MyCar gallery
+            $('.mycar-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
+                }
+            });
+            
             // Configure NeoWeare gallery
             $('.neoweare-gallery').magnificPopup({
                 type: 'image',
@@ -988,47 +1135,24 @@
                     preload: [0,1]
                 }
             });
-
-            // Initialize Owl Carousels
-            $('.mern-carousel').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                items: 3,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
+            
+            // Configure NextMunch gallery
+            $('.nextmunch-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
                 }
             });
 
-            $('.mean-carousel').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                items: 3,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    }
+            // Configure UrbanGo gallery
+            $('.urbango-gallery').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1]
                 }
             });
 
@@ -1042,23 +1166,31 @@
                 // Add active class to clicked filter
                 $(this).addClass('active');
                 
-                // Show/hide carousels based on filter
+                // Show/hide project sections based on filter
                 if (filterValue === 'all') {
-                    $('.mern-carousel-wrapper').slideDown();
-                    $('.mean-carousel-wrapper').slideDown();
+                    $('.mern-projects-wrapper').slideDown();
+                    $('.mean-projects-wrapper').slideDown();
+                    $('.mobile-projects-wrapper').slideDown();
                 } else if (filterValue === '.webdesign') {
-                    $('.mern-carousel-wrapper').slideDown();
-                    $('.mean-carousel-wrapper').slideUp();
+                    $('.mern-projects-wrapper').slideDown();
+                    $('.mean-projects-wrapper').slideUp();
+                    $('.mobile-projects-wrapper').slideUp();
                 } else if (filterValue === '.development') {
-                    $('.mern-carousel-wrapper').slideUp();
-                    $('.mean-carousel-wrapper').slideDown();
+                    $('.mern-projects-wrapper').slideUp();
+                    $('.mean-projects-wrapper').slideDown();
+                    $('.mobile-projects-wrapper').slideUp();
+                } else if (filterValue === '.mobile') {
+                    $('.mern-projects-wrapper').slideUp();
+                    $('.mean-projects-wrapper').slideUp();
+                    $('.mobile-projects-wrapper').slideDown();
                 }
             });
 
             // Initialize with "show all" active
             $('.filter[data-filter="all"]').addClass('active');
-            $('.mern-carousel-wrapper').show();
-            $('.mean-carousel-wrapper').show();
+            $('.mern-projects-wrapper').show();
+            $('.mean-projects-wrapper').show();
+            $('.mobile-projects-wrapper').show();
         });
 
         // Toast function
