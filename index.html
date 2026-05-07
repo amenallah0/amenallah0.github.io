@@ -21,6 +21,7 @@
             transition: width .1s linear;
             box-shadow: 0 0 8px var(--neon);
         }
+
         *,
         *::before,
         *::after {
@@ -295,8 +296,13 @@
         }
 
         @keyframes gradientShift {
-            0%   { background-position: 0% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         .hero-desc {
@@ -493,7 +499,7 @@
             position: absolute;
             inset: -1px;
             border-radius: 21px;
-            background: linear-gradient(135deg, rgba(0,245,196,.3), transparent 50%, rgba(123,47,255,.2));
+            background: linear-gradient(135deg, rgba(0, 245, 196, .3), transparent 50%, rgba(123, 47, 255, .2));
             z-index: 0;
             pointer-events: none;
         }
@@ -506,7 +512,7 @@
             transform: translateX(-50%);
             width: 60%;
             height: 40px;
-            background: radial-gradient(ellipse, rgba(0,245,196,.25), transparent 70%);
+            background: radial-gradient(ellipse, rgba(0, 245, 196, .25), transparent 70%);
             filter: blur(10px);
             z-index: -1;
         }
@@ -1353,13 +1359,14 @@
 
             <div class="work-card" data-cat="web">
                 <div class="work-card-img wc4">
-                    <img src="assets/E-Learn/screencapture-localhost-3000-courses-2026-04-18-13_05_01.png" alt="NextNest E-Learn Platform">
+                    <img src="assets/E-Learn/screencapture-localhost-3000-courses-2026-04-18-13_05_01.png"
+                        alt="E-Learn Platform">
                     <div class="work-card-img-overlay"></div>
                     <div class="card-hover-overlay"><span class="card-hover-btn">View Project ↗</span></div>
                 </div>
                 <div class="work-card-body">
                     <div class="work-card-tag">Web · E-Learning</div>
-                    <div class="work-card-title">NextNest — E-Learn Platform</div>
+                    <div class="work-card-title">E-Learn Platform</div>
                     <div class="work-card-desc">Full online learning platform with multi-role auth, course catalog,
                         interactive quizzes, progress tracking, certificates, and real-time messaging.</div>
                     <div class="work-card-techs">
